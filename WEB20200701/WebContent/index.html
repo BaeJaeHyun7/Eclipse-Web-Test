@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String 객체</title>
+<script type="text/javascript">
+	/* var characters = prompt('사용할 비밀번호를 입력해주세요.','6글자 이상');
+	
+	if(characters.length < 6){
+		alert('6글자 이상으로 입력해 주세요.');
+	}else {
+		alert('참 잘했어요');
+	} */
+
+	/* var str = 'abcd EFGH';
+
+	alert(str.charAt(3));
+	
+	var str = 'abcd EFGH';
+	
+	alert(str.concat("ijk"));
+	//같은기능
+	alert(str+'ijk'); */
+	
+	/* var index = str.indexOf('cd');
+	
+	alert(index); */
+	
+	/* var str = 'abcd EFGH cd';
+
+	alert(str.replace('cd','CD')); */
+	
+/* 	var str = 'abcd EFGH cd'; */
+
+	/* alert(str.slice('1','6')); */
+
+	/* var str2 = '2020-07-01';
+	
+	var array = str2.split('-');
+	
+	for (var i = 0; i < array.length; i++) {
+		alert(array[i]);
+	}
+ */
+
+	/* alert(str.substr(2,7));
+	alert(str.substring(2,7)); */
+
+	/* var output = '';
+	for(var key in window){
+		output += '*' + key + ' : '+ window[key]+'\n'; 
+	}
+	alert(output); */
+	
+	/* {
+		키1 : 값1,
+		키2 : 값2,
+		키3 : 값3		
+	} */
+	
+	//window 새창 뜨는기능
+	/* window.open(); */
+	
+	//p.297확인하면서 볼것
+	/* window.open('http://hanbit.co.kr','child','width=600,height=300',true); */
+	
+	/* var child = window.open('','','width = 300, height = 200');
+	var width = screen.width;
+	var height = screen.height;
+	
+	child.moveTo(0,0);
+	child.resizeTo(width/2-150,height/2-100);
+	나누기 2를 한것은 꼭지점의 정가운데 위치를 확인하기 위함이고 
+	-150,-100을 한 이유는 사이즈를 조절하기 위함이다.
+	/* child.resizeTo(width,height); */
+	
+	/* setInterval(function(){
+		child.resizeBy(-20,-20);
+		child.moveBy(10,10);
+	},1000); */
+	
+	/* location.href = 'http://www.naver.com'; */
+	
+	/* window.onload = function(){
+		//코드 작성
+	} */
+	
+	/* window.onload = function(){
+		alert('Process - 0')
+	}
+	//-->크롬에서 하지말고 익스플로러에서 할것 */
+	
+	
+	window.onload = function(){
+		var id = document.getElementById('aaa').value;
+		alert(id);	
+
+	}
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+	<h1>Process - 1</h1>	
+	<h2>Process - 2</h2>
+	<br>
+	ID : <input type="text" id="aaa" value="test">
+	
+
+
+
+</body>
+</html>

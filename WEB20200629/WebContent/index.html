@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript 연습1</title>
+<script type="text/javascript">
+	/* alert('This is "String"');     //ok
+	alert("This is 'String'");	   //ok
+	
+	alert('This is \'String\'');  //ok  문자열+변수로 인해서 문자열로 인식이 안되서 bad
+	alert("This is "String"");	//bad */
+	
+	/* alert(true > false); */
+	
+	/* //변수를 선언
+	var pi;
+	alert(pi);
+	
+	
+	
+	//변수에 값을 할당합니다. pi는 숫자자료형이 된다.
+	pi = 3.14159265;
+	pi = '문자열';
+	//값이 들어갈때 자동적으로 형태가 정해져서 3.14는 사라진다.
+	alert(pi);
+	
+	
+	//java에서 쓸려고 한다고 하면
+	double pi = 3.14; */
+	
+	
+	/* window.onload = function() {
+		var list = '';
+		
+		list += '<ul>';
+		list += '<li>Hello</li>';
+		list += '<li>JavaScript..!</li>';
+		list += '</ul>';
+		
+		document.body.innerHTML = list;
+	} */
+	
+	//1. alert() 함수
+	
+	/* alert(typeof ('string'));
+	alert(typeof (273));
+	alert(typeof(true));
+	alert(typeof(function(){}));
+	alert(typeof({}));
+	alert(typeof(alpha)); */
+	
+	/* //2. prompt() 함수 - 잘사용X
+	
+	var input = prompt('메세지를 입력해주세요' , 'Defstr');
+	
+	//출력합니다.
+	alert(input); */
+	
+	
+	/* //3. confirm() - 종종사용
+	
+	var input = confirm('수락하시겠습니까');
+	
+	alert(input); */
+	
+	/* alert('52'+273);
+	alert('52'*273);
+	alert('문자'*273); // -->Nan (nost a number) 출력(숫자가 아니다)
+	 */
+	 
+	/*  if(273 < 100){
+		 alert('273 < 100 => true');
+	 }
+	
+	alert('종료');
+	 */
+	 
+	 //코딩 기법중에 메서드체이닝
+	 
+	 /* new String("abc").subString(0,2).indexOf(); */ //리턴값이 실행값과 같을때 사용가능하다.
+	 
+	/*  var date = new Date();
+	 var hour = date.getHours();
+	 
+	 if(hour < 12){
+		 
+		 alert("오전입니다.")
+		 
+	 }
+	 
+ 	if(hour >= 12){
+		 
+		 alert("오후입니다.")
+		 
+	 } */
+	 
+	 
+	 
+	/* var input = Number(prompt('숫자를 입력하세요','숫자'));
+	 
+	 switch (input % 2) {
+	case 0 :
+		    alert("짝수입니다.");
+		break;
+	case 1 :
+	    alert("홀수입니다.");
+	break;
+
+	default:alert("숫자가 아닙니다.");
+		break;
+	}  */
+	
+	
+	/* for(var i = 0; i<100; i++){
+		 alert("출력");		
+	}
+	 */
+	 
+	var array = [273,'String',true,function(){},{},[273,103]]; 
+	
+	 alert(array);
+	 
+	 alert(array[0]);
+	 alert(array[1]);
+	 alert(array.length);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</script>
+
+
+
+</head>
+<body>
+
+	
+
+
+
+
+</body>
+</html>

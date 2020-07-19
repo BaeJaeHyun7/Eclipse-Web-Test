@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function check(){
+		
+		var name = document.getElementById("name").value;
+		
+		if(name == ""){
+			alert("이름을 반드시 입력해주세요");
+			return false;
+		}
+		
+		for (var i = 0; i < name.length; i++) {
+			if(!isNaN(name.charAt(i))){
+				alert("이름은 영문자나 한글로 입력해주세요");
+				return false;
+				
+			}
+		}
+		
+		var id = document.getElementById("id").value;
+		
+		if(id == ""){
+			alert("아이디를 반드시 입력해 주세요");
+			return false;		
+		}else if (id.length < 3 || id.length > 8) {
+			alert("아이디는 3~8글자로 입력해주세요");
+			return false;
+		}
+		
+		var password1 = document.getElementById("password1").value;
+		var password2 = document.getElementById("password2").value;
+		
+		if(password1 != password2){
+			alert("동일한 비밀번호를 입력해 주세요");
+			return false;
+		}
+		
+		var phone = document.getElementsByName("phone");
+		
+		var cnt = 0;
+		for (var i = 0; i < phone.length; i++) {
+			if(phone[i].checked == true){
+				cnt++;
+			}
+		}if(cnt == 0){
+			alert("통신사를 선택해 주세요");
+			return false;
+		}
+		return true;
+		
+		
+	}
+		
+
+
+</script>
+<style type="text/css">
+	td{
+		border: solid 1px gray;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		
+		}
+		
+	.table{
+		border-collapse: collapse; 
+		}
+		
+	.firstCol{
+			color: red;
+			}
+	.color{
+			background-color: rgb(240,240,240);
+			}
+			
+	.button{
+			width : 160px;
+			margin : 0 auto;
+			}
+			
+	input[type = submit]{
+						width: 70px; height: 30px;
+						background-color: #f0f9ff;
+						border: solid 1px #028fed;
+						color : #028fed;
+						border-radius: 3px;
+						font-weight: bold;						
+						}
+	
+	input[type = reset]{
+						width: 70px; height: 30px;
+						background-color: white;
+						border: solid 1px #999999; 
+						border-radius: 3px; 
+						}
+						
+	select{
+			height: 21px;
+		 }
+		 
+	input[type = button]{
+						background-color: white;
+						border: solid 1px;
+						border-radius: 3px;
+						}	
+	
+	.mg-t10{
+		margin-top: 10px;
+	}
+	
+	#div1{
+	width: 1000px;
+	margin: 0 auto;
+	}
+</style>
+
+</head>
+<body>
+<form action="" onsubmit="return check()" >
+	<div id="div1">
+	<div style="text-align : right;">
+		<span class = "firstCol">(*)</span><span>부분은 필수 입력사항입니다.</span>
+	</div>	
+			<div>
+				<table class="table">
+					<tr>
+						<td style="width: 200px;" class="color">고객님의 이름<span class = "firstCol">(*)</span></td>
+						<td style="width: 800px;"><input id = "name" type="text"></td>					
+					</tr>
+					<tr>
+						<td class="color">희망아이디<span class = "firstCol">(*)</span></td>
+						<td>
+							<input id = "id" type="text">
+							<input type="button" value="중복확인">
+							<br>
+							<span>- 3~12 자리 영문, 숫자 조합(대소문자 구분 없으며, 특수기호 사용은 불가)</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="color">비밀번호 입력<span class = "firstCol">(*)</span></td>
+						<td>
+							<input id = "password1" type="password">
+							<span>- 5~8자리 문자와 숫자를 이용하여 만드실 수 있습니다.</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="color">비밀번호 다시입력<span class = "firstCol">(*)</span></td>
+						<td>
+							<input id = "password2" type="password">
+							<span>- 영문은 대소문자를 구분합니다.</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="color">주로 사용하는 이메일<span class = "firstCol">(*)</span></td>
+						<td>
+							<input type="text">
+							<span> @ </span>
+							<input type="text">
+							<select>
+									<option>선택하세요</option>
+									<option>google</option>
+									<option>naver</option>
+									<option>daum</option>
+							</select>
+							<br>
+							<input type="checkbox">
+							<span>천리안 메일을 주로 사용하는 메일로 설정하시겠습니까?</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="color">주소<span class = "firstCol">(*)</span></td>
+						<td>
+							<input type="text">
+							<span>-</span>
+							<input type="text">
+							<input type="button" value="우편번호 검색">
+							<br>
+							<input type="text" class="mg-t10" style="width: 550px;">
+							<br>
+							<span>나머지 주소</span>
+							<input type="text"  class="mg-t10" style="width: 400px;">
+						</td>
+					</tr>
+					<tr>
+						<td class="color">휴대폰 번호<span class = "firstCol">(*)</span></td>
+						<td>
+							<select>
+									<option>선택</option>
+									<option>010</option>
+									<option>011</option>
+									<option>017</option>
+									<option>019</option>
+							</select>
+							<span> - </span>
+							<input type="text">
+							<span> - </span>
+							<input type="text">
+							&nbsp;<input type="radio" name="phone">SKT
+							&nbsp;<input type="radio" name="phone">KTF
+							&nbsp;<input type="radio" name="phone">LGT
+						</td>
+					</tr>
+					<tr>
+						<td>일반 전화번호</td>
+						<td>
+							<input type="text">
+							<span>-</span>
+							<input type="text">
+							<span>-</span>
+							<input type="text">
+							&nbsp;<input type="radio" name="place">집
+							&nbsp;<input type="radio" name="place">직장
+						</td>
+					</tr>
+					<tr>
+						<td> 천리안소식지 및 휴대폰 <br>문자(SMS) 수신 </td>
+						<td>
+							<input type="checkbox">
+							<span>천리안 소식메일을 수신합니다.</span>
+							<br>
+							<input type="checkbox">
+							<span>알림 및 소식등 정보 휴대폰  문자 수신</span>
+						</td>
+					</tr>				
+				</table>
+				<br>
+				<div class="button">
+					<input type="submit" value="가입">
+					<input type="reset" value="다시입력">
+				</div>
+				
+						
+			</div>
+	</div>
+</form>
+
+
+
+</body>
+</html>

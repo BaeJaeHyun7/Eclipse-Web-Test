@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var radioValue = null;
+	
+	function radio1(){
+		radioValue = "SKT";
+	}
+	
+	function radio2(){
+		radioValue = "KTF";
+	}
+	
+	function radio3(){
+		radioValue = "LGT";
+	}
+	
+	
+	
+	
+	function check(){
+		
+		var name = document.getElementById("name").value;
+		if(name == ""){
+			alert("이름을 반드시 입력해 주세요");
+			return false;
+		}
+		
+		var flag = false;
+		for(var i = 0; i<name.length;i++){
+			if(!isNaN(Number(name.charAt(i)))){
+				flag = true;
+				break;
+			} 
+		}if(flag){
+			alert("이름은 영문자나 한글로 입력해주세요.");
+			return false;
+		}
+		
+		var password = document.getElementById("password").value;
+		if(password == ""){
+			alert("아이디를 반드시 입력해 주세요");
+			return false;
+		} else if(password <3 || password > 8){
+			alert("아이디는 3~8글자로 입력해 주세요.");
+			return false;
+		}
+		
+		var pw1 = document.getElementById("password1").value;
+		var pw2 = document.getElementById("password2").value;
+		
+		if(pw1 != pw2){
+			alert("동일한 비밀번호를 입력해 주세요");
+			return false;
+		}
+		
+		/* var radioList = document.getElementsByName("phone");
+		console.log(radioList); */
+		
+		
+		/* var selectedValue = null;
+		for(var i = 0;i < radioList.length;i++){
+			if(radioList[i].checked){
+				selectedValue = radioList[i].value;
+			}
+			if(selectedValue == null){
+				alert("선택해주세요");
+				return false;
+			}
+		} */
+		
+		if(radioValue == null){
+			alert("통신사를 선택해 주세요");
+			return false;
+		}
+		
+	}
+
+
+
+</script>
+<style type="text/css">
+	td{
+		border: solid 1px #999999;
+		padding-top: 5px;
+		padding-bottom: 8px;
+		padding-left: 5px;
+		}
+		
+	.firstCol{
+	
+		background-color: rgb(240,240,240);
+	
+			}
+		
+	.redStar{
+			color: red;
+		}
+		
+	input[type=button]{
+		background-color: white;
+		border: solid 1px #999999; 
+		border-radius: 3px; 
+	}
+	
+	button{
+		background-color: #f0f9ff;
+		border: solid 1px #028fed;
+		color : #028fed;
+		border-radius: 3px;
+		font-weight: bold;
+			}
+	.address{
+		margin-top: 50px;
+	}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+<div style="width: 1000px; margin: 0 auto;">
+	<div style="width: 1000px; text-align: right;"><span class="redStar">(*)</span>부분은 필수 입력사항입니다.</div>
+	<table style="border-collapse:collapse;">
+		<tr>
+			<td class="firstCol" style="width: 200px;">고객님의 이름<span class="redStar">(*)</span></td>
+			<td style="width: 800px;"><input id="name" type="text"></td>
+		</tr>
+		<tr>
+			<td class="firstCol">희망 아이디(ID)<span class="redStar">(*)</span></td>
+			<td>
+				<input id="password" type="text">
+				<input type="button" value="중복확인">
+				<!-- <button>중복확인</button> -->
+				<div>- 3~12자리 영문, 숫자 조합(대소문자 구분 없으며, 특수기호 사용은 불가)</div> 
+			</td>
+		</tr>
+		<tr>
+			<td class="firstCol">비밀번호 입력<span class="redStar">(*)</span></td>
+			<td>
+				<input id = "password1" type="password">
+				<span>- 5~8자리 문자와 숫자를 이용하여 만드실 수 있습니다.</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="firstCol">비밀번호 다시입력<span class="redStar">(*)</span></td>
+			<td>
+				<input id = "password2" type="password">
+				<span>- 영문은 대소문자를 구분합니다.</span>
+			</td>			
+		</tr>
+		<tr>
+			<td class="firstCol">주로 사용하는 이메일<span class="redStar">(*)</span></td>
+			<td>
+				<input type="text">
+				<span>@</span>
+				<input type="text">
+				<select style="height: 21px;">
+					<option>선택하세요</option>
+					<option>google</option>
+					<option>naver</option>
+					<option>daum</option>
+				</select>
+				<br>
+				<input type="checkbox">
+				<span>천리안 메일을 주로 사용하는 주로 사용하는 메일을 설정하시겠습니까? </span>
+			</td>
+		</tr>
+		<tr>
+			<td class="firstCol">주소<span class="redStar">(*)</span></td>
+			<td class ="address">				
+				<input type="text">
+				<span>-</span>
+				<input type="text">
+				<input type="button" value="우편번호 검색">
+				<br>
+				<input type="text" style="width: 520px;">
+				<br>
+				<span>나머지 주소</span>
+				<input type="text">								
+			</td>		
+		</tr>		
+		<tr>
+			<td class="firstCol">휴대폰 번호<span class="redStar">(*)</span></td>
+			<td>
+				<select style="height: 21px;">
+					<option>선택</option>
+					<option>010</option>
+					<option>011</option>
+					<option>017</option>
+					<option>019</option>
+				</select>
+				<span>-</span>
+				<input type="text">
+				<span>-</span>
+				<input type="text">
+				
+				&nbsp;<input type="radio" name="phone" value="SKT" onclick="radio1()">SKT
+				&nbsp;<input type="radio" name="phone" value="KTF" onclick="radio2()">KTF
+				&nbsp;<input type="radio" name="phone" value="LGT" onclick="radio3()">LGT
+				
+			</td>
+		</tr>
+		<tr>
+				<td>일반 전화번호</td>
+				<td>
+					<input type = "text" size = "10px;">
+					<span>-</span>
+					<input type = "text">
+					<span>-</span>
+					<input type = "text">
+					&nbsp;<input type = "radio" name="phone">집
+					&nbsp;<input type = "radio" name="phone">직장</td>			
+			</tr>
+			<tr>
+				<td>천리안 소식지 및 휴대폰 문자(SMS)수신</td>
+				<td><input type = "checkbox">천리안 소식메일을 수신합니다.</input><br><input type = "checkbox">알림 및 소식등 정보 휴대폰 문자 수신</input></td>			
+			</tr>
+	</table>
+	<br>
+	<div style="width: 160px; margin: 0 auto;">
+		<button style="width: 70px;height: 30px;display: inline;" onclick="check()">가입</button>&nbsp;
+		<input type="button" value="다시입력" style="width: 70px;height: 30px;display: inline;">
+	</div>
+	
+	
+ </div>
+
+
+
+</body>
+</html>

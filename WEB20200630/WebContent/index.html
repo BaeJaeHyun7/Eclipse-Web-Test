@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript 연습2</title>
+<script type="text/javascript">
+
+	/* var array = [0,1];
+	
+	array.push(2);
+	array.push(3);
+	array.push(4);
+	
+	alert(array);
+ */
+ 
+ 	/* var array = ['포도','사과','바나나','망고'];
+		
+ 	for(var i in array){
+ 		
+ 		alert(array[i]);} */
+ 		
+ 		/* var output = '';
+ 		
+ 		for(var i = 0; i<9; i++){
+ 			for(var j = 0; j<=i; j++){
+ 				output += '*';  				
+ 				
+ 			}output += '\n';
+ 			
+ 		}alert(output); */
+ 		
+ 		
+ 		/* var fnc = function(){ 			
+ 			var output = prompt('숫자를 입력해 주세요','숫자');
+ 			alert(output); 			
+ 		} 		
+ 		alert(fnc);
+ 		 */
+ 		 
+ 		 
+ 		/* fnc1(); 
+ 		  function fnc1(){
+ 			alert('함수 A');	 
+ 		 }
+ 		 
+ 		function fnc1(){
+ 			alert('함수 B');	 
+ 		 }
+ 		  */
+ 		
+ 		
+ 		/* fnc2();
+ 		
+ 		var fnc2 = function(){
+ 			alert('함수 A');	
+ 		};
+ 		
+ 		var fnc2 = function(){
+ 			alert('함수 B')	
+ 		}; */
+ 		
+ 		
+ 		/*//함수는 자료형이기때문에 얘는 익명이기 때문에 자연스럽게 세미콜론
+ 		int a = 3;
+ 		var fnc3 = function(){alert('함수 A');};
+ 		
+ 		// 함수는 자료형이지만  
+ 		
+ 		public void main(){
+ 			
+ 		} 문장이 아니라 표현식이다.
+ 		
+ 		function fnc3(){
+ 			alert('함수 B');
+ 		}
+ 		
+ 		fnc3(); */
+ 		
+ 		/* function f(x){
+ 		 	return x*x;	
+ 		}
+ 		
+ 		var n = f(3);
+ 		
+ 		alert(n); */
+ 		
+ 		
+ 		
+ 		/* //콜백함수
+ 		function callTenTimes(callback){
+ 			for(var i = 0;i<10;i++){
+ 			
+ 				callback();
+ 			} 			
+ 		}
+ 		
+ 		var callback = function(){
+ 			alert('함수호출');
+ 			
+ 		};
+ 		
+ 		callTenTimes(callback); */
+ 		
+ 		/* function returnFunction(){
+ 			return function(){
+ 				alert('Hello Function...!');
+ 			}; 			
+ 		}
+ 		
+ 		//returnFunction()();
+ 		
+ 		var rfnc = returnFunction();
+ 		
+ 		rfnc(); */
+ 		
+ 		
+ 	/* 	//setInterval()함수
+ 		setTimeout(function(){
+ 			alert('3초가 지났습니다. ㅇㅂㅇ');	
+ 		},3000);
+ 		
+ 		var intervalID = setInterval(function(){
+ 			alert('<p>'+new Date()+'</p>');
+ 			},1000);
+ 			
+ 		setTimeout(function(){
+ 			clearInterval(intervalID);	
+ 		},10000); 		
+ 		 */
+ 		 
+ 		 
+ 		 /* var willEval = '';
+ 		 //코드를 수정하기 편하라고 처음에 공백으로 남겨둔다.
+ 		 willEval += 'var number = 10;';
+ 		 willEval += 'alert(number);';
+ 		 
+ 		 eval(willEval);
+ 		 
+ 		 //문자열을 이어붙이는 것 
+ 		 a = 'a';
+ 		 a += 'b';
+ 		 a += 'c';
+ 		 
+ 		 alert(a); */
+ 		 
+ 		/*  //infinity - 많이 안씀
+ 		 var number = 1/0;
+ 		 alert(number+" : "+ isFinite(number)); */
+ 		 
+ 		 
+ 		/*  //숫자인지 아닌지를 확인하는 함수 - isNaN함수
+ 		 if (isNaN('1234asdf')) {
+			alert('NaN == NaN');
+		}else{
+			alert('NaN != NaN');
+		}
+ 		 */
+ 		 
+ 		/* var num = '1234abc';
+ 		 
+ 		alert(Number(num));
+ 		
+ 		alert(parseInt(num));
+ 		 */
+ 		
+ 	/* 	 
+ 		 //객체 생성 객체는 중괄호로 표현
+ 		 //밑에는 4개의 키와 4개의 값이 들어있다
+ 		 //요거는 이미 정해진 값이다.
+ 		 var product = {
+ 				 
+ 		 	제품명 : '7D 건조 망고',
+ 		 	유형 : '당절임',
+ 		 	성분 : '망고, 설탕, 메타중아황산나트륨, 치자황색소',
+ 		 	원산지 : '필리핀'
+ 		 };
+ 		 
+ 		/*  var object = {
+ 			'with space' : 273		 
+ 		 
+ 		 }		 
+ 		 
+ 		 alert(object['with space']); */
+ 		 
+ 		/*  var object = {
+ 		
+ 				 number : 273,
+ 				 string : 'RintIanTta',
+ 				 boolean : true,
+ 		 		 array : [52,273,103,32],
+ 		 		 method : function(){
+ 		 			alert("메소드 실행");	 
+ 		 		 }
+ 		 };
+ 		 
+ 		 object.method();
+ 		 
+ 		 var person = {
+ 		
+ 				 name : '윤인성',
+ 				 eat : function(food){
+ 					alert(this.name + '이' + food + '을/를 먹습니다.');	 
+ 				 }
+ 				 
+ 		 };
+ 		 
+ 		 person.eat('밥');
+ 		  */ 
+ 		  
+ 		  
+ 		  //p.183 속성추가
+ 		  var student = {};
+ 		  
+ 		  student.이름 = '윤인성';
+ 		  student.취미 = '악기';
+ 		  student.특기 = '프로그래밍';
+ 		  student.장래희망 = '생명공학자';
+ 		  
+ 		  student.toString = function(){
+ 			  var output = '';
+ 			  for(var key in this){
+ 				  
+ 				  if(key != 'toString'){
+ 					 output += key+'\t'+this[key]+'\n'; 
+ 				  }
+ 				  
+ 				  }
+ 			  return output;
+ 			  };
+ 			  
+ 		 //메서드 실행	  
+ 		  alert(student.toString());
+ 		 
+ 		 //p.184 속성제거
+ 		 
+ 		 delete(student.장래희망);
+ 		 
+ 		 alert(student.toString());
+ 		 
+ 		
+ 		
+ 		
+ 		
+ 	
+ 		
+ 		
+ 		 
+ 		 
+ 		
+ 		
+ 		
+ 		
+ 	
+ 
+ 
+ 
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>
